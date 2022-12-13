@@ -1,35 +1,27 @@
 from flask import Flask
-from NorenApi import NorenApi
+import requests
+
 
 
 app = Flask(__name__)
+app.url_map.strict_slashes = False
 
-@app.route('/tst')
 
-def tst():
-    return "Finally done something"
-
-  
-@app.route('/')
+@app.route("/")
 def home():
-	return "Finally done something"
+    return "API is working fine"
 
-  
-@app.route('/gli')
-     
+@app.route("/ttt")
+def ttt():
+    return "API is working fine in ttttt"
 
-def gli(): 
-  shoonya=NorenApi()
-  shoonya.token_setter()
-  shoonya.place_order(buy_or_sell='B', product_type='C',
-                       exchange='NSE', tradingsymbol='SBIN-EQ', 
-                        quantity=1, discloseqty=0,price_type='LMT', price=560.00, trigger_price=199.50,
-                        retention='DAY', remarks='my_order_001')
-  return shoonya.get_quotes('NSE','HDFCBANK-EQ')
+
 
 if __name__ == "__main__":
-	app.run()    
+    #app.debug = True
+    app.run(host="0.0.0.0",port= 5000)
   
+
   
 
   
