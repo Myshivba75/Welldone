@@ -11,8 +11,8 @@ def tst():
 
   
 @app.route('/')
-
-return "Finally done something"
+def home():
+	return "Finally done something"
 
   
 @app.route('/gli')
