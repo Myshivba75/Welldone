@@ -1,6 +1,6 @@
 from flask import Flask
 from NorenApi import NorenApi
-import config
+
 
 app = Flask(__name__)
 
