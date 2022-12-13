@@ -1,5 +1,6 @@
 from flask import Flask
 import requests
+from NorenApi import NorenApi
 
 
 
@@ -15,7 +16,11 @@ def home():
 def ttt():
     return "API is working fine in ttttt"
 
-
+@app.route("/test")
+def test():
+    shoonya=NorenApi()
+    shoonya.token_setter()
+    return shoonya.get_quotes('NSE','HDFCBANK-EQ')
 
 if __name__ == "__main__":
     #app.debug = True
