@@ -91,7 +91,7 @@ def workk():
             st=st
             write_do_to_file(bt,st)
 
-            print (fff)
+            return (fff)
 
 
     if (do =="exb" and bt ==1):
@@ -100,7 +100,7 @@ def workk():
             bt=0
             st=st
             write_do_to_file(bt,st)
-            print (fff)
+            return (fff)
 
     if (do =="exs" and st==1):
             fff=buy_signal(trasy)
@@ -108,7 +108,7 @@ def workk():
             bt=bt
             st=0
             write_do_to_file(bt,st)
-            print (fff)
+            return (fff)
 
 
 
@@ -120,7 +120,7 @@ def workk():
             st=1
             bt=bt
             write_do_to_file(bt,st)
-            print (fff)
+            return (fff)
 
 
 
