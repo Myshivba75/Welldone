@@ -46,13 +46,13 @@ def workk():
 
     def write_do_to_file(bt,st):
             data1 = {"bt": bt ,"st": st}
-            with open("do_key.json", 'w') as json_f:
+            with open("tmp/do_key.json", 'w') as json_f:
                 json.dump(data1, json_f)
 
 
 
     def read_do_from_file():
-            with open("do_key.json",'r') as json_f:
+            with open("tmp/do_key.json",'r') as json_f:
                 data2=json.load(json_f)
                 return data2
 
