@@ -25,7 +25,7 @@ def test():
     shoonya.token_setter()
     return shoonya.get_quotes('NSE','HDFCBANK-EQ')
 
-@app.route("/workk")
+@app.route("/workk",methods=['POST'])
 def workk():
     def buy_signal(trasy):
 
